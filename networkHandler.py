@@ -305,10 +305,7 @@ class maze_api_session:
 	def trySolving(self):
 		self.tryMoving(self.x, self.y)
 
-	# def printDebuggingInfo(self):
-	# 	print("Maze Width: ", self.maze_width)
-	# 	print("Maze Height: ", self.maze_height)
-	# 	print("Trying to access: maze_representation[%s][%s]" % ())
+
 
 
 print("Hello")
@@ -326,25 +323,3 @@ print(maze_session.maze_stack)
 maze_session.printNoFetch()
 print("DONE")
 
-
-def get_session_token():
-	API_ENDPOINT = "http://ec2-34-216-8-43.us-west-2.compute.amazonaws.com/session"
-
-	UID = "505021146"
-
-	post_data = {"uid": UID}
-	token = requests.post(url = API_ENDPOINT, data = post_data)
-	print(token.text)
-	response = token.json()
-	token = response.get('token')
-	print(token)
-	return token
-
-
-# def main():
-# 	maze_session = api_seesion()
-# 	maze_session.get_maze_info()
-
-
-# if __name__ == 'main':
-# 	main()
