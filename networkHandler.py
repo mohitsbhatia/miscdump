@@ -1,7 +1,7 @@
 
 import requests
 import json
-import numpy
+
 
 class maze_api_session:
 	def __init__(self):
